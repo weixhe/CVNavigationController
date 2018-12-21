@@ -25,7 +25,6 @@ class ThirdViewController: UIViewController {
         let refresh = CVBarButtonItem(title: "刷新", target: self, action: #selector(refreshUI))
         let space = CVBarSpaceItem(space: 5)
         self.cv_navigationItem?.rightItems = [space, share, refresh]
-        
     }
     
 
