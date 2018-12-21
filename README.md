@@ -26,15 +26,15 @@ pod 'CVNavigationController'     // 引入组件 - navBar
   2. 显示多个item
   ```
   // 左侧
-  let item1 = CVBarButtonItem(title: "关闭", target: nil, action: nil)
-  let item2 = CVBarButtonItem(title: "返回", target: nil, action: nil)
-  cv_navigationItem?.leftItems = [item1, item2]
+  let close = CVBarButtonItem(title: "关闭", target: nil, action: nil)
+  let back = CVBarButtonItem(title: "返回", target: nil, action: nil)
+  cv_navigationItem?.leftItems = [close, back]
   
   // 右侧
   let space1 = CVBarSpaceItem(space: 5)
-  let item3 = CVBarButtonItem(title: "分享", target: self, action: #selector(share))
-  let item4 = CVBarButtonItem(title: "刷新", target: nil, action: nil)
-  cv_navigationItem?.rightItems = [space1, item3, item4]
+  let share = CVBarButtonItem(title: "分享", target: self, action: #selector(share))
+  let refresh = CVBarButtonItem(title: "刷新", target: nil, action: nil)
+  cv_navigationItem?.rightItems = [space1, share, refresh]
   ```
   
   3. 显示title
