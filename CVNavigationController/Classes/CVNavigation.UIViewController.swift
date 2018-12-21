@@ -42,6 +42,17 @@ extension UIViewController {
     }
     
     @objc func backToPrevious() {
-        self.navigationController?.popViewController(animated: true)
+        
+        let controlers = self.navigationController?.viewControllers
+        if controlers != nil && controlers!.count > 1 {
+            if controlers![controlers!.count - 1] == self {
+                navigationController?.popViewController(animated: true)
+                return
+            }
+        }
+        
+        dismiss(animated: true, completion: nil)
+        
+//        self.navigationController?.popViewController(animated: true)
     }
 }

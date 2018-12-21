@@ -22,6 +22,8 @@
 		843D483A21CD1C6C00D77B71 /* CVNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D483121CD1C6C00D77B71 /* CVNavigationBar.swift */; };
 		843D483C21CD1CA000D77B71 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D483B21CD1C9F00D77B71 /* BaseNavigationController.swift */; };
 		843D483E21CD1D7600D77B71 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D483D21CD1D7600D77B71 /* SecondViewController.swift */; };
+		843D484021CD28B100D77B71 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D483F21CD28B100D77B71 /* ThirdViewController.swift */; };
+		843D484221CD2CD800D77B71 /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D484121CD2CD800D77B71 /* ForthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		843D483121CD1C6C00D77B71 /* CVNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVNavigationBar.swift; sourceTree = "<group>"; };
 		843D483B21CD1C9F00D77B71 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		843D483D21CD1D7600D77B71 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		843D483F21CD28B100D77B71 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		843D484121CD2CD800D77B71 /* ForthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				843D481621CD1BAC00D77B71 /* AppDelegate.swift */,
 				843D481821CD1BAC00D77B71 /* ViewController.swift */,
 				843D483D21CD1D7600D77B71 /* SecondViewController.swift */,
+				843D483F21CD28B100D77B71 /* ThirdViewController.swift */,
+				843D484121CD2CD800D77B71 /* ForthViewController.swift */,
 				843D483B21CD1C9F00D77B71 /* BaseNavigationController.swift */,
 				843D482821CD1C6C00D77B71 /* Classes */,
 				843D481D21CD1BAD00D77B71 /* Assets.xcassets */,
@@ -183,8 +189,10 @@
 				843D481721CD1BAC00D77B71 /* AppDelegate.swift in Sources */,
 				843D483C21CD1CA000D77B71 /* BaseNavigationController.swift in Sources */,
 				843D483521CD1C6C00D77B71 /* CVBarButtonItem.swift in Sources */,
+				843D484221CD2CD800D77B71 /* ForthViewController.swift in Sources */,
 				843D483A21CD1C6C00D77B71 /* CVNavigationBar.swift in Sources */,
 				843D483621CD1C6C00D77B71 /* CVNavigation.UIViewController.swift in Sources */,
+				843D484021CD28B100D77B71 /* ThirdViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
