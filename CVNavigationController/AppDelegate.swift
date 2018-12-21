@@ -20,8 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         
         
-        window?.rootViewController = ViewController()
+        
+        let vc = BaseNavigationController.init(rootViewController: ViewController())
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
+        
+        CVNavigationAppearance.share.itemTextColor = UIColor.orange
+        CVNavigationAppearance.share.titleColor = UIColor.orange
         
         return true
     }
