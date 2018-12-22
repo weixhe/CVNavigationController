@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"                  #支持的平台和版本号
   s.source       = { :git => "https://github.com/weixhe/CVNavigationController.git", :tag => "1.0.1" }         #存储库的git地址，以及tag值
   s.source_files =  "CVNavigationController/Classes/*.{swift}" #需要托管的源代码路径
-  s.resource_bundles = {"CVNavigationController" => ["CVNavigationController/Classes/*.bundle"]}
+  s.resources    = "CVNavigationController/Classes/*.bundle"		# 资源文件 
+  # s.resource_bundles = {"CVNavigationController" => ["CVNavigationController/Classes/*.bundle"]}		# 不需要打Bundle
   s.requires_arc = true #是否支持ARC
 
   # s.dependency "KeychainAccess"    #所依赖的第三方库，没有就不用写
