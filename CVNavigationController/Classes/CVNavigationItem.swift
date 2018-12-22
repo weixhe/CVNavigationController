@@ -31,7 +31,9 @@ open class CVNavigationItem: NSObject {
     lazy private var titleLabel: UILabel = { return _titleLabel() }()
     lazy private var contentView: __NavigationContainerView = { return _contentView() }()
     weak private var viewController: UIViewController?
+    
     private let appearance = CVNavigationAppearance.share
+    
     deinit {
         removeNotify()
     }

@@ -41,7 +41,7 @@ extension UIViewController {
         }
     }
     
-    @objc func backToPrevious() {
+    @objc public func backToPrevious() {
         
         let controlers = self.navigationController?.viewControllers
         if controlers != nil && controlers!.count > 1 {

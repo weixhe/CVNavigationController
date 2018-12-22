@@ -34,7 +34,7 @@ open class CVBarButtonItem: CVBarItem {
 
 // MARK: - Life Cycle
 extension CVBarButtonItem {
-    convenience init(title: String?, target: AnyObject?, action: Selector?) {
+    convenience public init(title: String?, target: AnyObject?, action: Selector?) {
         self.init()
         self.text = title
         self.target = target
@@ -45,7 +45,7 @@ extension CVBarButtonItem {
         _actionDidSet()
     }
     
-    convenience init(image: UIImage?, target: AnyObject?, action: Selector?) {
+    convenience public init(image: UIImage?, target: AnyObject?, action: Selector?) {
         self.init()
         self.image = image
         self.target = target
@@ -56,7 +56,7 @@ extension CVBarButtonItem {
         _actionDidSet()
     }
     
-    convenience init(title: String?, image: UIImage?, target: AnyObject?, action: Selector?) {
+    convenience public init(title: String?, image: UIImage?, target: AnyObject?, action: Selector?) {
         self.init()
         self.text = title
         self.image = image

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CVBarSpaceItem: CVBarItem {
+open class CVBarSpaceItem: CVBarItem {
     public var space: CGFloat = 0
 }
 

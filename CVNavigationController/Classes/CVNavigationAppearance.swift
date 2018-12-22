@@ -10,7 +10,7 @@ import UIKit
 
 /// navBar 设置样式，必须在navBarh出现之前设置，否则无用
 public class CVNavigationAppearance: NSObject {
-    static let share = CVNavigationAppearance()
+    static public let share = CVNavigationAppearance()
     
     // items
     public var itemFont = UIFont.systemFont(ofSize: 18)
