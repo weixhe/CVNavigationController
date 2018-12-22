@@ -10,6 +10,7 @@ import UIKit
 
 open class CVNavigationController: UINavigationController {
 
+    public var slidingBackEnable: Bool = true { didSet { _slidingBackEnableDidSet() } }       // 是否能侧滑返回
 }
 
 // MARK: - Public - Override
@@ -118,5 +119,13 @@ fileprivate extension CVNavigationController {
         let ni = CVNavigationItem()
         ni.bind(to: navigationBar)
         return ni
+    }
+}
+
+// MARK: - Private - DidSet
+fileprivate extension CVNavigationController {
+    /// 禁止侧滑返回
+    func _slidingBackEnableDidSet() {
+        self.interactivePopGestureRecognizer?.isEnabled = slidingBackEnable
     }
 }

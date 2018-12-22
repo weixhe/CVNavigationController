@@ -12,7 +12,7 @@ class SecondViewController: UIViewController {
 
     var backText: String?
     var cusTitle: Bool = false
-    
+    var slidingBackEnable: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,21 @@ class SecondViewController: UIViewController {
         
         self.cv_navigationItem?.rightItem = CVBarButtonItem(title: "分享", target: self, action: #selector(shareToFriend))
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.cv_navigationController?.slidingBackEnable = slidingBackEnable
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.cv_navigationController?.slidingBackEnable = true
+    }
+    
+    
+    
+    // MARK: - Actions
+    
     
     @objc func shareToFriend() {
         UIAlertView(title: "提示", message: "分享成功", delegate: nil, cancelButtonTitle: "OK").show()

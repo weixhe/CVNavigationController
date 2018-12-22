@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     var backText: String?
     var cusTitle: Bool = false
+    var slidingBackEnable: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +30,30 @@ class ViewController: UIViewController {
         view.addSubview(createText)
         
         let showCusTitle = UIButton(type: .system)
-        showCusTitle.frame = CGRect(x: 180, y: 100, width: 100, height: 44)
+        showCusTitle.frame = CGRect(x: createText.frame.maxX + 10, y: 100, width: 100, height: 44)
         showCusTitle.setTitle("默认标题", for: .normal)
         showCusTitle.setTitleColor(UIColor.blue, for: .normal)
         showCusTitle.backgroundColor = UIColor.white
         showCusTitle.addTarget(self, action: #selector(changeTitleType(sender:)), for: .touchUpInside)
         view.addSubview(showCusTitle)
         
+        let slidingBackEnable = UIButton(type: .system)
+        slidingBackEnable.frame = CGRect(x: showCusTitle.frame.maxX + 10, y: 100, width: 150, height: 44)
+        slidingBackEnable.setTitle("slidingBack YES", for: .normal)
+        slidingBackEnable.setTitleColor(UIColor.blue, for: .normal)
+        slidingBackEnable.backgroundColor = UIColor.white
+        slidingBackEnable.isSelected = true
+        slidingBackEnable.addTarget(self, action: #selector(onClickSlidingBackEnable(sender:)), for: .touchUpInside)
+        view.addSubview(slidingBackEnable)
+        
+        
+        let line = UIView(frame: CGRect(x: 0, y: slidingBackEnable.frame.maxY + 10, width: view.frame.width, height: 0.5))
+        line.backgroundColor = UIColor.lightGray
+        view.addSubview(line)
+        
+        
         let push = UIButton(type: .system)
-        push.frame = CGRect(x: 10, y: 180, width: 150, height: 44)
+        push.frame = CGRect(x: 10, y: line.frame.maxY + 10, width: 150, height: 44)
         push.setTitle("Push", for: .normal)
         push.setTitleColor(UIColor.blue, for: .normal)
         push.backgroundColor = UIColor.white
@@ -45,7 +61,7 @@ class ViewController: UIViewController {
         view.addSubview(push)
         
         let push2 = UIButton(type: .system)
-        push2.frame = CGRect(x: 170, y: 180, width: 150, height: 44)
+        push2.frame = CGRect(x: push.frame.maxX + 10, y: push.frame.minY, width: 150, height: 44)
         push2.setTitle("Push More Item", for: .normal)
         push2.setTitleColor(UIColor.blue, for: .normal)
         push2.backgroundColor = UIColor.white
@@ -53,12 +69,14 @@ class ViewController: UIViewController {
         view.addSubview(push2)
         
         let presentToNav = UIButton(type: .system)
-        presentToNav.frame = CGRect(x: 10, y: 250, width: 150, height: 44)
+        presentToNav.frame = CGRect(x: 10, y: push.frame.maxY + 10, width: 150, height: 44)
         presentToNav.setTitle("Present To Nav", for: .normal)
         presentToNav.setTitleColor(UIColor.blue, for: .normal)
         presentToNav.backgroundColor = UIColor.white
         presentToNav.addTarget(self, action: #selector(presentToNavController), for: .touchUpInside)
         view.addSubview(presentToNav)
+        
+       
         
     }
 
@@ -66,6 +84,7 @@ class ViewController: UIViewController {
         let secondVC = SecondViewController()
         secondVC.backText = backText
         secondVC.cusTitle = cusTitle
+        secondVC.slidingBackEnable = slidingBackEnable
         self.navigationController?.pushViewController(secondVC, animated: true)
     }
     
@@ -80,6 +99,11 @@ class ViewController: UIViewController {
         self.present(forthNav, animated: true, completion: nil)
     }
     
+    @objc func onClickSlidingBackEnable(sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        slidingBackEnable = sender.isSelected ? true : false
+        sender.setTitle(slidingBackEnable ? "slidingBack YES" : "slidingBack NO", for: .normal)
+    }
     
     @objc func customText(sender: UIButton) {
         sender.isSelected = !sender.isSelected
