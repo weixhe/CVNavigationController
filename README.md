@@ -53,7 +53,19 @@ pod 'CVNavigationController'     // 引入组件 - navBar
   cv_navigationItem?.titleView = titleView
   ```
   
-  
+  5. 禁止/打开 侧滑
+  通过nav的 `slidingBackEnable` 属性控制是否允许侧滑
+  ```
+  override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      self.cv_navigationController?.slidingBackEnable = slidingBackEnable
+  }
+    
+  override func viewWillDisappear(_ animated: Bool) {
+     super.viewWillDisappear(animated)
+     self.cv_navigationController?.slidingBackEnable = true
+  }
+  ```
   
   
   
