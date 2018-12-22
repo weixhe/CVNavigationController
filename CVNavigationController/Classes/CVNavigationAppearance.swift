@@ -9,7 +9,7 @@
 import UIKit
 
 /// navBar 设置样式，必须在navBarh出现之前设置，否则无用
-public class CVNavigationAppearance: NSObject {
+open class CVNavigationAppearance: NSObject {
     static public let share = CVNavigationAppearance()
     
     // items

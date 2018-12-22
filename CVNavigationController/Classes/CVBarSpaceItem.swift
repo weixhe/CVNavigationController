@@ -14,7 +14,7 @@ open class CVBarSpaceItem: CVBarItem {
 
 // MARK: - Life Cycle
 extension CVBarSpaceItem {
-    convenience init(space: CGFloat) {
+    convenience public init(space: CGFloat) {
         self.init()
         self.space = space
     }
